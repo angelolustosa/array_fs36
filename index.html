@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container form-container">
+        <h3 class="text-center mb-4">Tabuada</h3>
+        <form action="">
+
+            <div class="row mb-3">
+                <div class="col">
+                    <input type="number" id="numero" class="form-control" placeholder="Número" required>
+                </div>
+                <div class="col">
+                    <input type="number" id="de" class="form-control" placeholder="De" required>
+                </div>
+                <div class="col">
+                    <input type="number" id="ate" class="form-control" placeholder="Até" required>
+                </div>
+            </div>
+            
+            <div id="tabuada" class="tabuada-container"></div>
+    
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-primary btn-block" onclick="gerarTabuada()">Gerar Tabuada</button>
+                </div>
+    
+                <div class="col">
+                    <button type="reset" class="btn btn-secondary btn-block" onclick="limpar()">Limpar</button>
+                </div>
+            </div>
+
+        </form>
+       
+    </div>
+
+    <!-- <script>
+        function gerarTabuada() {
+            const numero = document.getElementById('numero').value;
+            const de = document.getElementById('de').value;
+            const ate = document.getElementById('ate').value;
+            const tabuadaContainer = document.getElementById('tabuada');
+            const tabuadaNumero = document.getElementById('tabuada-numero');
+            tabuadaContainer.innerHTML = '';
+
+            if (numero && de && ate) {
+                tabuadaNumero.innerText = numero;
+                for (let i = de; i <= ate; i++) {
+                    const resultado = numero * i;
+                    const item = document.createElement('div');
+                    item.className = 'tabuada-item';
+                    item.innerText = `${numero} x ${i} = ${resultado}`;
+                    tabuadaContainer.appendChild(item);
+                }
+            } else {
+                tabuadaNumero.innerText = '';
+            }
+        }
+    </script> -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>
